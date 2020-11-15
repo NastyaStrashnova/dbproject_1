@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+{% block title%}Резервування{% endblock %}
+{% block body %}
+    <section class="wrapper style1">
+    <div class="container">
+
+
+        <form method="post">
+
+
+            <label>Оберіть дату:</label>
+		        <input type="date" id="date" name="date"/>
+
+
+            <label>Оберіть час:</label>
+                <input type="time" name="time" value="03:15" min="00:01" max="06:00">
+
+
+            <label>Оберіть номер столу:</label>
+                    <select name="table" type="table">
+                        <option value="0">Номер</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+
+
+
+
+                 <input type="submit" value="Забронювати стіл">
+
+        </form>
+    </section>
+    </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+{% block title%}Вход{% endblock %}
+{% block body %}
+
+    <section class="wrapper style1">
+    <div class="container">
+
+	        <form method="post">
+
+		        <label for="username">Email:</label>
+                    <input type="text" name="email" class="placeholder" placeholder="admin@example.com">
+
+
+		        <label for="password">Password:</label>
+                    <input type="password" name="password" class="placeholder" placeholder="Введіть пароль...">
+
+
+                    <input type="submit" href="sign_up.html"  value="Увійти">
+                    <button type="button"><a href="sign_up.html">Зареєструватись</a></button>
+
+	        </form>
+
+    </div>
+    </section>
+
+
+
+
+
+
+{% endblock %}

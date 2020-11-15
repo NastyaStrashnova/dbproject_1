@@ -1,0 +1,52 @@
+{% extends 'index.html' %}
+{% block title%}Профіль{% endblock %}
+{% block body %}
+
+
+
+
+
+ <section class="wrapper style1">
+    <div class="container">
+
+{% if email == None%}
+<label>зареєструйтесь чи увійдіть в аккаунт</label>
+{% elif email != None%}
+        <label >My data:</label>
+        {% for i in user%}
+        {{i.name}}
+        {{i.email}}
+        {{i.birthday}}
+        {% endfor %}
+
+	        <form method="post">
+
+		        <label for="username">Email:</label>
+                    <input type="text" name="email" class="placeholder" placeholder="admin@example.com">
+
+                <label for="name">Name:</label>
+                    <input type="text" name="name" class="placeholder" placeholder="admin">
+
+		        <label for="password">Password:</label>
+                    <input type="password" name="password" class="placeholder" placeholder="Введіть пароль...">
+
+                <label for="date">Дата народження: </label>
+                    <input type="date" id="date" name="birthday" class="placeholder" placeholder="03.08.2016"/>
+
+                 <label for="date">Знижка: </label>
+                    <div class="price"></div>
+
+                <label for="date">Сума замовлення: </label>
+                    <div class="price"></div>
+                <input type="submit" value="Змінити">
+	        </form>
+
+    </div>
+    </section>
+{% endif %}
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,99 @@
+
+{% extends 'index.html' %}
+{% block title%}Menu{% endblock %}
+{% block body %}
+
+				<section class="wrapper style1">
+					<div class="container">
+					 <div class="row">
+
+
+							<section class="6u 12u(narrower)">
+								<div class="box post">
+                                   <a href="#" class="image left"><img src="../static/css/images/m01.jpg" alt="" /></a>
+									<div class="inner">
+										<h3>Гірос</h3>
+										<p>Оливковое масло, лимонный сок, чеснок, сушеный орегано, морская соль,
+											свежемолотый черный перец, помидоры, красный лук, огурцы,
+											зеленый стручковый перец, сыр фета, маслины без косточек</p>
+									</div>
+                                    <div>Price: $100</div>
+									{% if email != None%}
+                                        <form method="post">
+											<input type="hidden" name="index" value=1 >
+											<input type="hidden" name="item" value='Гірос' >
+                                        	<input type="submit" class="btn-success"  value="Замовити">
+										</form>
+									{% endif %}
+								</div>
+							</section>
+
+
+							<section class="6u 12u(narrower)">
+								<div class="box post">
+								<a href="#" class="image left"><img src="../static/css/images/m02.jpg" alt="" /></a>
+									<div class="inner">
+										<h3>Грецький салат</h3>
+										 <p>Оливковое масло, лимонный сок, чеснок, сушеный орегано, морская соль,
+											свежемолотый черный перец, помидоры, красный лук, огурцы,
+											зеленый стручковый перец, сыр фета, маслины без косточек</p>
+									</div>
+                                    <div>Price: $100</div>
+									{% if email != None%}
+								<form method="post">
+										<input type="hidden" name="index" value=2 >
+										<input type="hidden" name="item" value='Грецький салат' >
+                                        <input type="submit" class="btn-success" value="Замовити" >
+										</form>
+									{% endif %}
+								</div>
+							</section>
+
+
+							<section class="6u 12u(narrower)">
+								<div class="box post">
+									<a href="#" class="image left"><img src="../static/css/images/m03.jpg" alt="" /></a>
+									<div class="inner">
+										<h3>Мусака</h3>
+										<p>Оливковое масло, лимонный сок, чеснок, сушеный орегано, морская соль,
+											свежемолотый черный перец, помидоры, красный лук, огурцы,
+											зеленый стручковый перец, сыр фета, маслины без косточек</p>
+									</div>
+                                    <div>Price: $100</div>
+									{% if email != None%}
+                                       <form method="post">
+										   <input type="hidden" name="index" value=3 >
+										   <input type="hidden" name="item" value='Мусака' >
+                                        <input type="submit" class="btn-success"  value="Замовити">
+										</form>
+									{% endif %}
+								</div>
+							</section>
+
+
+							<section class="6u 12u(narrower)">
+								<div class="box post">
+									<a href="#" class="image left"><img src="../static/css/images/m04.jpg" alt="" /></a>
+									<div class="inner">
+										<h3>Соулакі</h3>
+										<p>Оливковое масло, лимонный сок, чеснок, сушеный орегано, морская соль,
+											свежемолотый черный перец, помидоры, красный лук, огурцы,
+											зеленый стручковый перец, сыр фета, маслины без косточек</p>
+									</div>
+                                    <div>Price: $100</div>
+									{% if email != None%}
+                                        <form method="post">
+											<input type="hidden" name="index" value=4 >
+											<input type="hidden" name="item" value='Соулакі' >
+                                        <input type="submit" class="btn-success"   value="Замовити">
+										</form>
+									{% endif %}
+								</div>
+							</section>
+
+
+                    </div>
+					</div>
+				</section>
+
+{% endblock %}

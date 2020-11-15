@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+{% block title%}Реєстрація{% endblock %}
+{% block body %}
+
+    <section class="wrapper style1">
+    <div class="container">
+
+	        <form method="post">
+
+		        <label for="email">Email:</label>
+                    <input type="text" name="email" class="placeholder" placeholder="admin@example.com">
+
+		        <label for="password">Password:</label>
+                    <input type="password" name="password" class="placeholder" placeholder="Введіть пароль...">
+
+                <label for="password">Password:</label>
+                    <input type="password" name="confirm_password" class="placeholder" placeholder="Повторіть пароль...">
+
+                <label for="name">Name:</label>
+                    <input type="text" name="name" class="placeholder" placeholder="admin">
+
+                <label for="date">Дата народження: </label>
+                    <input type="date" id="date" name="birthday"/>
+
+                    <input type="submit" class="btn-success" value="Зареєструватися">
+
+	        </form>
+        <w><a type="submit" class="btn-success" href="sign_in.html" >Вже є аккаунт</a></w>
+    </div>
+    </section>
+
+{% endblock %}

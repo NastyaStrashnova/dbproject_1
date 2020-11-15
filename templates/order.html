@@ -1,0 +1,86 @@
+{% extends 'index.html' %}
+{% block title%}Замовлення{% endblock %}
+{% block body %}
+
+
+<section class="wrapper style1">
+    <div class="container">
+        <div class="shopping-cart">
+{% if orders != [] and orders!= 'abs' %}
+            <div class="title"> Формування замовлення</div>
+
+
+
+{%for order in orders%}
+
+             <section class="ord">
+                 <label><div class="title">{{order.item}}</div><label>
+                            <div>Price: $100</div>
+        <form method="post">
+                        <input type="hidden" name="delete" value='on' >
+                        <input type="hidden" name="item" value="{{order.item}}" ></input>
+                     <input type="submit"  value = 'X' class="btn-success"></input>
+        </form>
+			 </section>
+{%endfor%}
+
+
+
+
+
+    <section>
+
+        <form id="order" method="post">
+
+
+
+            <label>Оберіть знижку:</label>
+                    <select type="sale">
+                        <option value="sale0">Без знижок</option>
+                        <option value="sale1">День народження</option>
+                        <option value="sale2">Накопичені бонуси</option>
+                    </select>
+
+
+            <label>Оберіть номер столу:</label>
+                    <select name="table" type="table">
+                        <option value="0">Номер</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+
+            <label>Оберіть вид розрахунку:</label>
+                    <select type="pay">
+                        <option value="pay0">Тип оплати</option>
+                        <option value="pay1">Готівка</option>
+                        <option value="pay2">Безготівкова</option>
+                    </select>
+
+            <div>До сплати: $200</div>
+
+
+            <input type="submit" class="btn-success" value="Замовити">
+
+        </form>
+    </section>
+
+
+
+
+{% elif orders == 'abs' %}
+<div>Wait for food</div>
+
+{% else %}
+<div>Корзина порожня</div>
+{% endif %}
+
+</div>
+</div>
+</section>
+
+
+{% endblock %}

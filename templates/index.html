@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+
+		<title>{% block title%}{% endblock %}</title>
+		<meta charset="utf-8" />
+		<script src="../static/js/ie/html5shiv.js"></script>
+		<script src="../static/js/ie/html5shiv.js"></script>
+		<link rel="stylesheet" href="../static/css/main2.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script src="../static/js/ie/html5shiv.js"></script>
+		<link rel="stylesheet" href="../static/css/ie8.css" />
+		<link rel="stylesheet" href="../static/css/ie9.css" />
+
+
+    </head>
+	<body>
+
+		<div id="page">
+
+				<div id="header">
+
+						<vis><h1>
+							{% if email != None%}
+							<a>Вітаємо, {{name}}!</a>
+								{% else %}
+							<a>Будь-ласка авторизуйтеся</a>
+								{% endif %}
+						</h1></vis>
+
+
+
+						<nav id="nav">
+							<ul>
+								<li class="current"><a href="menu.html">Меню</a>
+									<ul>
+										<li><a href="#">Салати</a></li>
+										<li><a href="#">Закуски </a></li>
+										<li><a href="#">Піца</a></li>
+										<li>
+											<a href="#">Напої</a>
+											<ul>
+												<li><a href="#">Вода</a></li>
+												<li><a href="#">Соки</a></li>
+												<li><a href="#">Коктелі</a></li>
+												<li><a href="#">Гарячі</a></li>
+												<li><a href="#">Алкогольні</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li><a href="reserv.html" >Резервування</a></li>
+								<li><a href="coment.html">Відгуки</a></li>
+								<li><a href="profile.html">Профіль</a></li>
+								<li><a href="order.html">Замовлення</a></li>
+								<!--<li><a href="profile.html">Вихід</a></li>-->
+
+							</ul>
+						</nav>
+
+				</div>
+
+				<section id="banner">
+					<header>
+						<a href="#" class="button">Детальніше</a>
+					</header>
+				</section>
+
+
+{% block body %} {% endblock %}
+
+				<div id="footer"></div>
+
+
+			<!-- Scripts -->
+			<script src="../static/js/jquery.min.js"></script>
+			<script src="../static/js/jquery.dropotron.min.js"></script>
+			<script src="../static/js/skel.min.js"></script>
+			<script src="../static/js/util.js"></script>
+			<script src="../static/js/ie/respond.min.js"></script>
+			<script src="../static/js/main.js"></script>
+
+	</body>
+</html>
