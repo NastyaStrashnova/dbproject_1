@@ -32,6 +32,9 @@ def main_page():
 
 @app.route('/sign_up',methods=['POST','GET'])
 def regestration(email=None, name = None):
+    global global_email, global_name
+    global_email = None
+    global_name = None
     if request.method == 'POST':
         name = request.form['name']
         email = request.form['email']
@@ -63,6 +66,9 @@ def regestration(email=None, name = None):
 
 @app.route('/sign_in', methods=['POST','GET'])
 def sign_in(email=None, name=None):
+    global global_email, global_name
+    global_email = None
+    global_name = None
     if request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
